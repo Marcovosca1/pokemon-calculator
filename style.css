@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap");
+
+:root {
+  --Normal: rgb(146, 154, 156);
+  --Fighting: rgb(244, 100, 138);
+  --Flying: rgb(80, 124, 212);
+  --Poison: rgb(188, 82, 232);
+  --Ground: rgb(232, 130, 68);
+  --Rock: rgb(196, 174, 112);
+  --Bug: rgb(162, 212, 56);
+  --Ghost: rgb(94, 100, 208);
+  --Steel: rgb(94, 160, 178);
+  --Fire: rgb(255, 152, 56);
+  --Water: rgb(58, 176, 232);
+  --Grass: rgb(64, 208, 112);
+  --Electric: rgb(246, 216, 48);
+  --Psychic: rgb(255, 136, 130);
+  --Ice: rgb(98, 204, 212);
+  --Dragon: rgb(80, 136, 188);
+  --Dark: rgb(106, 122, 156);
+  --Fairy: rgb(255, 132, 230);
+}
+
+* {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%); */
+
+  background: #00bf8f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #001510,
+    #00bf8f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #001510,
+    #00bf8f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Quicksand", sans-serif;
+}
+
+h1.title {
+  background-color: rgba(0, 0, 0, 0.76);
+  color: crimson;
+  font-family: "Raleway", sans-serif;
+  padding: 15px;
+}
+
+.title span {
+  color: aliceblue;
+}
+
+h2 {
+  margin: 1.5em 2em;
+  font-family: "Quicksand", sans-serif;
+  text-decoration: underline;
+  font-size: 2em;
+}
+
+hr {
+  margin-top: 2em;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  margin: 1em 2em;
+}
+
+p span {
+  font-size: 1.5em;
+}
+
+.types {
+  width: 418px;
+  margin-left: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  user-select: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-evenly;
+  color: aliceblue;
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 120px;
+  padding: 5px;
+  margin: 3px;
+
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  color: whitesmoke;
+  transition: ease 0.5s, background-color 1s;
+}
+
+.statistics {
+  margin-bottom: 2em;
+}
+
+.clicked {
+  border: 1px solid white;
+  filter: brightness(0.7) !important;
+}
+
+.blocked {
+  opacity: 0.4;
+}
+
+.disappear {
+  display: none;
+}
+
+.custom{
+  background-color: transparent;
+  padding: 1.5em;
+}
+
+input{
+  font-family: "Quicksand", sans-serif;
+}
+
+fieldset{
+  padding: 1em;
+}
+
+legend{
+  margin-left: 3em;
+  color: lavender;
+}
+
+#nume{
+  width: 200px;
+  padding: 0.5em;
+}
+
+@media only screen and (max-width: 870px) {
+  .hero {
+    display: block;
+  }
+}
