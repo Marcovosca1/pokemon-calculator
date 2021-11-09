@@ -1,70 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Project</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 class="title">Pokemon <span>Calculator</span></h1>
     <div class="hero">
-        <div class="choosing">
-            <h2>Choose the typing: </h2>
-            <p>Primary type:</p>
-            <div class="types" id="primary"></div>
+      <div class="choosing">
+        <h2>Choose the typing:</h2>
+        <p>Primary type:</p>
+        <div class="types" id="primary"></div>
 
-            <p>Secondary type:</p>
-            <div class="types"id="secondary"></div>
+        <p>Secondary type:</p>
+        <div class="types" id="secondary"></div>
+      </div>
+
+      <div class="statistics">
+        <h2>Results:</h2>
+        <div id="big0">
+          <p>It takes <span>4 x</span> from:</p>
+          <div id="e0" class="types"></div>
         </div>
 
-
-
-        <div class="statistics">
-            <h2>Results: </h2>
-            <div id="big0">
-                <p>It takes <span>4 x</span> from:</p>
-                <div id="e0" class="types"></div>
-            </div>
-
-            <div id="big1">
-                <p>It takes <span>2 x</span> from:</p>
-                <div id="e1" class="types"></div>
-            </div>
-
-            <div id="big2">
-                <p>It takes <span>1 x</span> from:</p>
-                <div id="e2" class="types"></div>
-            </div>
-            
-            <div id="big3">
-                <p>It takes <span>1/2 x</span> from:</p>
-                <div id="e3" class="types"></div>
-            </div>
-            
-            <div id="big4">
-                <p>It takes <span>1/4 x</span> from:</p>
-                <div id="e4" class="types"></div>
-            </div>
-
-            <div id="big5">
-                <p>It takes <span>0 x</span> from:</p>
-                <div id="e5" class="types"></div>
-            </div>
+        <div id="big1">
+          <p>It takes <span>2 x</span> from:</p>
+          <div id="e1" class="types"></div>
         </div>
+
+        <div id="big2">
+          <p>It takes <span>1 x</span> from:</p>
+          <div id="e2" class="types"></div>
+        </div>
+
+        <div id="big3">
+          <p>It takes <span>1/2 x</span> from:</p>
+          <div id="e3" class="types"></div>
+        </div>
+
+        <div id="big4">
+          <p>It takes <span>1/4 x</span> from:</p>
+          <div id="e4" class="types"></div>
+        </div>
+
+        <div id="big5">
+          <p>It takes <span>0 x</span> from:</p>
+          <div id="e5" class="types"></div>
+        </div>
+      </div>
     </div>
 
-    <!-- <div class="custom">
-        <fieldset>
-            <legend>Add a new type</legend>
-            <form action="#">
-                <input type="text" id="nume" placeholder="The name of the type...">
-            </form>
-        </fieldset>
-        
-    </div> -->
+    <hr>
+
+    <div id="choose" class="flex">
+      <p>Would you like to add another type?</p>
+      <button id="polite">Yes</button>
+    </div>
+
+    <div id="custom" class="disappear">
+      <fieldset>
+        <legend>Add a new type</legend>
+        <form action="#">
+          <input type="text" id="nume" placeholder="The name of the type..." />
+        </form>
+      </fieldset>
+    </div>
+
+    <hr class="down">
 
     <script src="/code.js"></script>
-</body>
+  </body>
 </html>

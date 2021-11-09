@@ -1,5 +1,6 @@
 const firstDisplay = document.querySelector("#primary");
 const secondDisplay = document.querySelector("#secondary");
+const customBtn = document.getElementById("polite");
 const elem0 = document.getElementById("e0");
 const elem1 = document.getElementById("e1");
 const elem2 = document.getElementById("e2");
@@ -51,7 +52,7 @@ const Weakness = [
 ];
 
 
-// ----- Buttons -----
+// -------- Buttons -----------------------------
 Types.forEach((type) => {
   //primary type buttons
   const button1 = document.createElement("button");
@@ -76,7 +77,7 @@ Types.forEach((type) => {
 
   index++;
 });
-// -----------------------
+// --------------------------------------------------
 
 // I want for button None to always be the last button in secondary, that's why it's not in the Types array and created here
 const button2 = document.createElement("button");
@@ -88,7 +89,7 @@ button2.style.backgroundColor = getComputedStyle(button2).getPropertyValue("--" 
 
 const buttonArray1 = Array.from(firstDisplay.querySelectorAll("button"));
 const buttonArray2 = Array.from(secondDisplay.querySelectorAll("button"));
-let George;
+let George, Silviu;
 let chosen1 = 0;
 let chosen2 = Types.length;
 
@@ -96,12 +97,18 @@ firstDisplay.querySelectorAll("button")[chosen1].classList.add("clicked");
 secondDisplay.querySelectorAll("button")[chosen2].classList.add("clicked");
 showResults();
 
+// =====================EVENT LISTENERS=============================
 firstDisplay.addEventListener("click", clicked1);
 secondDisplay.addEventListener("click", clicked2);
+customBtn.addEventListener("click", ()=>{
+  document.getElementById("custom").classList.remove("disappear");
+  document.getElementById("choose").classList.remove("flex");
+  document.getElementById("choose").classList.add("disappear");
+})
 
 //  =========================== FUNCTIONS ===========================
 
-// ---- What happens when we click a primary button ----
+// ---- What happens when we click a primary button -------------
 function clicked1(e) {
   const but = e.target;
 
@@ -123,10 +130,10 @@ function clicked1(e) {
 
   showResults();
 }
-// ---------------------------------------------------
+// --------------------------------------------------------------
 
 
-// ---- What happens when we click a secondary button -----
+// ------ What happens when we click a secondary button -----------
 function clicked2(e) {
   const but = e.target;
   if (but.tagName == "BUTTON"){
@@ -140,7 +147,7 @@ function clicked2(e) {
     if (but.classList.contains("blocked") == false) {
       but.classList.add("clicked");
       chosen2 = parseInt(but.classList[1]);
-      George = but.textContent;
+      Silviu = but.textContent;
     }
   }
 
@@ -148,18 +155,23 @@ function clicked2(e) {
 }
 // -------------------------------------------------------
 
+// ---- Function for restraining the second type to be the same as the first type -------
 function stopGeorge() {
   buttonArray2.forEach((element) => {
     if (element.textContent == George) {
-      let Last = secondDisplay.querySelectorAll("button")[Types.length];
       element.classList.add("blocked");
       element.classList.remove("clicked");
+    }
+    if(Silviu == George){
+      let Last = secondDisplay.querySelectorAll("button")[Types.length];
       Last.classList.add("clicked");
       chosen2 = parseInt(Last.classList[1]);
     }
   });
 }
+// --------------------------------------------------------------------------------------
 
+// ---- Function that displays the weaknesses and strenghts -----------------------
 function showResults(){
   let result;
 
@@ -196,3 +208,4 @@ function showResults(){
     );
   }
 }
+// ------------------------------------------------------------------
